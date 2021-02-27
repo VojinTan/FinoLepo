@@ -1,0 +1,42 @@
+.navigacija-proizvodi{
+    display: flex;
+    flex-direction: row;
+    float: right;
+
+}
+.lista-navigacija-proizvodi{
+    
+    margin-right: 15px;
+    font-size: 15;
+    text-align: center;
+
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 4px 0;
+    transition: 0.5s;
+}
+.proba{
+    padding-left: 15px;
+}
+
+.lista-navigacija-proizvodi::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #00788a;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  .lista-navigacija-proizvodi:hover {
+    color: #00788a;
+  }
+  .lista-navigacija-proizvodi:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
